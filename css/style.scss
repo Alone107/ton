@@ -50,6 +50,9 @@ body {
     @media (max-width: 600px) {
       flex-direction: column;
     }
+    @media (max-width: 400px) {
+      gap: 6px;
+    }
     & a {
       max-width: 60px;
       width: 100%;
@@ -76,9 +79,10 @@ body {
       display: block;
       width: 100%;
       max-width: 120px;
-      @media (max-width: 600px) {
-        max-width: 85px;
+      @media (max-width: 400px) {
+        width: 85px;
       }
+
       & img {
         max-width: 100%;
       }
@@ -86,11 +90,16 @@ body {
   }
   &-title {
     margin-left: 60px;
+    @media (max-width: 450px) {
+      margin-left: 0;
+    }
     @media (max-width: 400px) {
-      font-size: 14px;
+      font-size: 18px;
+      margin-left: 0px;
     }
     @media (max-width: 319px) {
-      font-size: 12px;
+      font-size: 15px;
+      margin-left: 0px;
     }
   }
 }
@@ -123,30 +132,6 @@ body {
       padding-top: 91px;
       padding-bottom: 91px;
     }
-    // @media (max-height: 850px) {
-    //   max-height: 76vh;
-    // }
-    // @media (max-height: 810px) {
-    //   max-height: 77vh;
-    // }
-    // @media (max-height: 780px) {
-    //   max-height: 76vh;
-    // }
-    // @media (max-height: 740px) {
-    //   max-height: 73vh;
-    // }
-    // @media (max-height: 715px) {
-    //   max-height: 74vh;
-    // }
-    // @media (max-height: 690px) {
-    //   max-height: 70vh;
-    // }
-    // @media (max-height: 660px) {
-    //   max-height: 72vh;
-    // }
-    // @media (max-height: 640px) {
-    //   max-height: 71vh;
-    // }
   }
   &-item {
     display: block;
@@ -154,7 +139,6 @@ body {
     & img {
       max-width: 100%;
       min-height: 100%;
-      // object-fit: cover;
       @media (max-width: 600px) {
         min-height: 80px;
       }
@@ -195,4 +179,11 @@ body {
       }
     }
   }
+}
+
+.fslightbox-toolbar-button:first-child {
+  display: none;
+}
+.fslightbox-slide-number-container {
+  display: none !important;
 }
